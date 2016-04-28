@@ -9,4 +9,4 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT [ "sslh", "-f" ]
-CMD [ "-p", "0.0.0.0:80", "-p", "0.0.0.0:443", "--http", "localhost:81", "--ssl", "localhost:444", "--openvpn", "127.0.0.1:1192" ]
+CMD [ "-p", "0.0.0.0:80", "-p", "0.0.0.0:443", "--http", "http:80", "--ssl", "https:443", "--openvpn", "openvpn:1192" ]
